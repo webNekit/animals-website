@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html {
+	scroll-behavior: smooth;
+	background-color: var(--color-background);
+	overflow-x: hidden;
+	width: 100vw;
+}
+
+body {
+	width: 100vw;
+	background-color: var(--color-background);
+	font-family: var(--font-primary);
+	color: var(--color-text-secondary);
+	font-weight: 400;
+	text-wrap: balance;
+	transition: all 200ms linear;
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+
+a {
+	color: var(--link-color);
+}
+
+code {
+	background-color: #e9f1f6;
+	padding: 0.2rem;
+	border-radius: 4px;
+}
+
+pre.code {
+	overflow-x: auto;
+	background-color: #e9f1f6;
+	padding: 1rem;
+	border-radius: 4px;
+}
+.main__section {
+	width: 100%;
+	padding-top: var(--section-offset);
+	padding-bottom: var(--section-offset);
+	&:first-child {
+		padding-top: calc(var(--section-offset) * 2);
+	}
+}
+.section-title {
+	font-size: 42px;
+	color: var(--color-text);
+	font-weight: 900;
+	text-transform: uppercase;
+	@include mobile {
+		font-size: 24px;
+	}
+}

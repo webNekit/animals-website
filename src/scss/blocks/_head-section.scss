@@ -1,0 +1,30 @@
+
+.head-section {
+    width: 100%;
+    margin-bottom: 52px;
+    &__container {
+        max-width: 575px;
+    }
+
+    // .head-section__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    // .head-section__content-title
+
+    &__content-title {
+        text-align: center;
+    }
+
+    // .head-section__content-text
+
+    &__content-text {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+}

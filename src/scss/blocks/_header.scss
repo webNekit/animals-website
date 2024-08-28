@@ -1,0 +1,126 @@
+.header {
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 30px;
+    background-color: var(--color-foreground);
+    @include small-tablet {
+        position: relative;
+    }
+    // .header__container
+
+    &__container {
+    }
+
+    // .header__row
+
+    &__row {
+        width: 100%;
+    }
+
+    // .header__row--top
+
+    &__row--top {
+        display: flex;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--color-border-secondary);
+    }
+
+    // .header__col
+
+    &__col {
+        width: 100%;
+    }
+
+    // .header__col--left
+
+    &__col--left {
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+    }
+
+    // .header__phone
+
+    &__phone {
+
+    }
+
+    // .header__phone-link
+
+    &__phone-link {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 16px;
+    }
+
+    // .header__phone-number
+
+    &__phone-number {
+        font-weight: 700;
+        color: var(--color-text);
+    }
+
+    // .header__col--center
+
+    &__col--center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 1;
+    }
+
+    // .header__logo
+
+    &__logo {
+    }
+
+    // .header__col--right
+
+    &__col--right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    // .header__button-form
+
+    &__button-form {
+    }
+
+    // .header__row--bottom
+
+    &__row--bottom {
+        @include small-tablet {
+            padding-top: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+    
+    // .header__menu-btn
+    &__menu-btn {
+        --size: 42px;
+        width: var(--size);
+        height: var(--size);
+        border: 1px solid var(--color-border-secondary);
+        background-color: var(--color-border-secondary);
+        border-radius: var(--rounded-sm);
+        color: #fff;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        @include small-tablet {
+            display: flex;
+        }
+    }
+    // .header__navbar
+
+    &__navbar {
+        width: 100%;
+        @include small-tablet {
+            padding: 30px var(--container-padding);
+        }
+    }
+}
