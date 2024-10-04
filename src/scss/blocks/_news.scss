@@ -104,6 +104,11 @@
     // .news__card-infoMoreLink
 
     &__card-infoMoreLink {
+        &:is(:focus,:active) {
+            .news__card-infoName {
+                color: var(--color-primary);
+            }
+        }
     }
 
     // .news__card-infoName

@@ -1,23 +1,36 @@
 @mixin desktop {
-    @media (min-width: (1440px)) {
-      @content;
-    }
+  @media (min-width: (1440px)) {
+    @content;
   }
+}
 
-  @mixin tablet {
-    @media (max-width: (1024px)) {
-      @content;
-    }
+@mixin tablet {
+  @media (max-width: (1024px)) {
+    @content;
   }
-  
-  @mixin small-tablet {
-    @media (max-width: (768px)) {
-      @content;
-    }
+}
+
+@mixin small-tablet {
+  @media (max-width: (768px)) {
+    @content;
   }
-  
-  @mixin mobile {
-    @media (max-width: (576px)) {
-      @content;
-    }
+}
+
+@mixin mobile {
+  @media (max-width: (576px)) {
+    @content;
   }
+}
+
+@mixin sectionTitle {
+  font-size: 42px;
+  color: var(--color-text);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@mixin spacing-headSection {
+  &>*:not(:last-child) {
+    margin-bottom: 52px;
+  }
+}

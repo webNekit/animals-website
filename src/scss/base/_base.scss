@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+::selection {
+	background-color: var(--color-primary-secondary);
+}
+
 html {
 	scroll-behavior: smooth;
 	background-color: var(--color-background);
@@ -44,9 +48,6 @@ pre.code {
 	width: 100%;
 	padding-top: var(--section-offset);
 	padding-bottom: var(--section-offset);
-	&:first-child {
-		padding-top: calc(var(--section-offset) * 2);
-	}
 }
 .section-title {
 	font-size: 42px;
