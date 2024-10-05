@@ -29,6 +29,19 @@
   text-transform: uppercase;
 }
 
+@mixin sectionText {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@mixin sectionHead {
+  max-width: 840px;
+  margin-inline: auto;
+  & > *:not(:last-child) {
+    margin-block-end: 18px;
+  }
+}
+
 @mixin spacing-headSection {
   &>*:not(:last-child) {
     margin-bottom: 52px;

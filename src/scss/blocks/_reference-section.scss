@@ -12,6 +12,15 @@
         @include spacing-headSection;
     }
 
+    &__head {
+        @include sectionHead;
+    }
+
+    &__text {
+        text-align: center;
+        @include sectionText;
+    }
+
     // .reference-section__title
 
     &__title {

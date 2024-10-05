@@ -38,3 +38,26 @@
 .flex-center {
 	justify-content: center;
 }
+
+.is-tooltip {
+    position: relative;
+}
+
+.is-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0,0,0,.8);
+	-webkit-backdrop-filter: blur(2px);
+	-moz-backdrop-filter: blur(2px);
+	backdrop-filter: blur(2px);
+	color: #fff;
+	padding: 3px;
+	font-size: 12px;
+    border-radius: 4px;
+    opacity: 1;
+	visibility: visible;
+    transition: opacity 0.3s;
+}
