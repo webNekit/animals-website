@@ -15,6 +15,11 @@
 	overflow: hidden;
 }
 
+.active-modal {
+	transform: scale(.7);
+	transition: all .3s ease;
+}
+
 .no-scroll {
 	overflow-y: hidden;
 }
@@ -40,24 +45,29 @@
 }
 
 .is-tooltip {
-    position: relative;
+	position: relative;
 }
 
 .is-tooltip::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 100%;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0, 0, 0, .8);
 	-webkit-backdrop-filter: blur(2px);
 	-moz-backdrop-filter: blur(2px);
 	backdrop-filter: blur(2px);
 	color: #fff;
 	padding: 3px;
 	font-size: 12px;
-    border-radius: 4px;
-    opacity: 1;
+	border-radius: 4px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.is-tooltip.active::after {
+	opacity: 1;
 	visibility: visible;
-    transition: opacity 0.3s;
 }

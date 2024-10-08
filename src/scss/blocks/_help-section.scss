@@ -1,0 +1,48 @@
+.help-section {
+    width: 100%;
+    padding-block: var(--section-offset);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__container {
+    }
+
+    // .help-section__rowContent
+
+    &__rowContent {
+        @include spacing-headSection;
+    }
+
+    // .help-section__rowHead
+
+    &__rowHead {
+        @include sectionHead;
+    }
+
+    // .help-section__title
+
+    &__title {
+        text-align: center;
+        @include sectionTitle;
+    }
+
+    // .help-section__text
+
+    &__text {
+        text-align: center;
+        color: var(--color-text);
+        @include sectionText;
+    }
+
+    // .help-section__rowContext
+
+    &__rowContext {
+        display: flex;
+        justify-content: center;
+    }
+
+    // .help-section__btnModal
+
+    &__btnModal {
+    }
+}

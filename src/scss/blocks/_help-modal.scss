@@ -1,0 +1,134 @@
+.help-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 90;
+    &__wrapper {
+        --blur: 2px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: rgba(0,0,0,0.4);
+        -webkit-backdrop-filter: blur(var(--blur));
+        -moz-backdrop-filter: blur(var(--blur));
+        backdrop-filter: blur(var(--blur));
+        transition: background .5s, backdrop .5s;
+    }
+
+    // .help-modal__rowTop
+
+    &__rowTop {
+        width: 100%;
+        padding-block: 24px;
+    }
+
+    // .help-modal__rowTop-container
+
+    &__rowTop-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    // .help-modal__close
+
+    &__close {
+        --size: 46px;
+        width: var(--size);
+        height: var(--size);
+        color: var(--color-text);
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-primary-secondary);
+        border-radius: var(--rounded-sm);
+        border: none;
+        cursor: pointer;
+        &:is(:hover, :active) {
+            i {
+                transform: rotate(-45deg);
+            }
+        }
+        i {
+            transition: transform .2s;
+        }
+    }
+
+    // .help-modal__rowBottom
+
+    &__rowBottom {
+        width: 100%;
+        border-top-left-radius: var(--rounded-lg);
+        border-top-right-radius: var(--rounded-lg);
+        background-color: var(--color-background);
+    }
+
+    // .help-modal__rowBottom-container
+
+    &__rowBottom-container {
+        max-width: 940px;
+    }
+
+    // .help-modal__content
+
+    &__content {
+        width: 100%;
+        padding-block: 32px;
+        & > *:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    // .help-modal__content-title
+
+    &__content-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--color-text);
+    }
+
+    // .help-modal__form
+
+    &__form {
+        width: 100%;
+    }
+
+    // .help-modal__form-group
+
+    &__form-group {
+        @include formGroup;
+        &:last-child {
+            margin-block-start: 32px;
+        }
+    }
+
+    // .help-modal__form-item
+
+    &__form-item {
+        @include formItem;
+    }
+
+    // .help-modal__form-label
+
+    &__form-label {
+        @include formLabel;
+    }
+
+    // .help-modal__form-input
+
+    &__form-input {
+        @include formInput;
+    }
+
+    // .help-modal__form-button
+
+    &__form-button {
+    }
+}

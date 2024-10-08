@@ -1,23 +1,20 @@
 function copy() {
     document.addEventListener('DOMContentLoaded', () => {
-        const copyButton = document.querySelector('[data-control-copy]');
-        const textToCopy = document.querySelector('[data-target-copy]');
-    
-        copyButton.addEventListener('click', () => {
-            // Копируем текст в буфер обмена
-            navigator.clipboard.writeText(textToCopy.textContent)
-                .then(() => {
-                    // Добавляем класс для отображения tooltip
-                    copyButton.classList.add('is-tooltip');
+        const copyButtons = document.querySelectorAll('[data-control-copy]');
+        
+        copyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const textToCopy = button.parentElement.querySelector('[data-target-copy]').innerText;
+
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    button.classList.add('is-tooltip', 'active');
                     setTimeout(() => {
-                        copyButton.classList.remove('is-tooltip');
+                        button.classList.remove('active');
                     }, 2000);
-                })
-                .catch(err => {
-                    console.error('Ошибка копирования: ', err);
                 });
+            });
         });
-    });    
+    });
 }
 
 export default copy;

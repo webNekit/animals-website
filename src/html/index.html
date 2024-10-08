@@ -28,8 +28,8 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
 	</head>
 <body class="website" id="website">
-	@@include('blocks/header.html')
 	<div class="website__layout">
+		@@include('blocks/header.html')
 		<main class="website__main main" id="main">
 			<div class="main__wrapper">
 				@@include('blocks/banner.html')
@@ -37,10 +37,12 @@
 				@@include('blocks/news.html')
 				@@include('blocks/reference-section.html')
 				@@include('blocks/requisites-section.html')
+				@@include('blocks/help-section.html')
 			</div>
 		</main>
+		@@include('blocks/modals/help-modal.html')
+		@@include('blocks/footer.html')
 	</div>
-	@@include('blocks/footer.html')
 	<script src="./js/index.bundle.js"></script>
 </body>
 </html>
