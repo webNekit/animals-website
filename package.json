@@ -48,6 +48,7 @@
 		"@fancyapps/ui": "^5.0.35",
 		"avif-webp-checker": "^1.0.0",
 		"fslightbox": "^3.4.1",
+		"imask": "^7.6.1",
 		"swiper": "^11.1.10"
 	}
 }
