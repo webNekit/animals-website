@@ -1,0 +1,169 @@
+.footer {
+    width: 100%;
+    padding-block: var(--section-offset);
+    color: var(--color-text);
+    background-color: var(--color-primary-secondary);
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__rowContent
+
+    &__rowContent {
+        width: 100%;
+    }
+
+    // .footer__rowTop
+
+    &__rowTop {
+        width: 100%;
+        padding-block-end: 32px;
+        display: flex;
+        gap: var(--gap);
+        border-bottom: 1px solid var(--color-border-secondary);
+    }
+
+    // .footer__col
+
+    &__col {
+        width: 100%;
+    }
+
+    // .footer__col--left
+
+    &__col--left {
+        flex: 1;
+    }
+
+    // .footer__logo
+
+    &__logo {
+    }
+
+    // .footer__col--center
+
+    &__col--center {
+        flex: 2;
+    }
+
+    // .footer__navbar
+
+    &__navbar {
+        width: 100%;
+    }
+
+    &__navbar-title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    // .footer__navbar-menu
+
+    &__navbar-menu {
+        padding-block-start: 18px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    // .footer__navbar-item
+
+    &__navbar-item {
+        display: inline-flex;
+    }
+
+    // .footer__navbar-link
+
+    &__navbar-link {
+        &:is(:hover, :active) {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+
+    // .footer__col--right
+
+    &__col--right {
+        flex: 1;
+    }
+
+    // .footer__messanger
+
+    &__messanger {
+        width: 100%;
+    }
+
+    // .footer__messanger-title
+
+    &__messanger-title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    // .footer__messanger-list
+
+    &__messanger-list {
+        padding-block-start: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    // .footer__messanger-item
+
+    &__messanger-item {
+        display: inline-flex;
+    }
+
+    // .footer__messanger-link
+
+    &__messanger-link {
+
+    }
+
+    // .footer__messanger-logo
+
+    &__messanger-logo {
+        --size: 36px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        background-color: #fff;
+    }
+
+    // .footer__rowBottom
+
+    &__rowBottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--gap);
+        padding-block-start: 32px;
+    }
+
+    // .footer__copyright
+
+    &__copyright {
+        font-size: 14px;
+        font-weight: 600;
+        opacity: .5;
+    }
+
+    // .footer__development-link
+
+    &__development-link {
+        font-size: 14px;
+        font-weight: 600;
+        opacity: .5;
+        transition: opacity .2s;
+        &:is(:hover, :active) {
+            opacity: 1;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+}
