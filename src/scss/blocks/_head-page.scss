@@ -1,0 +1,36 @@
+.head-page {
+    width: 100%;
+    padding-block: var(--section-offset);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    @include mobile {
+        padding-block: 42px;
+    }
+    &__container {
+    }
+
+    // .head-page__rowContent
+
+    &__rowContent {
+        width: 100%;
+    }
+
+    // .head-page__title
+
+    &__title {
+        text-align: left;
+        font-size: 52px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--color-text);
+        @include small-tablet {
+            font-size: 46px;
+            font-weight: 800;
+        }
+        @include mobile {
+            font-size: 32px;
+            font-weight: 900;
+        }
+    }
+}

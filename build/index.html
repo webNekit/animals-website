@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Стартовый шаблон</title>
+		<title>Главная страница</title>
+		<meta name="title" content="Главная страница" />
 		<meta name="description" content="Краткое описание страницы, которое будет отображаться в результатах поиска." />
 		<meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3" />
 		<meta name="author" content="Ваше имя или название компании" />
@@ -42,26 +43,26 @@
 						</div>
 						<div class="header__col header__col--center">
 							<div class="header__logo logo">
-								<a href="#!" title="На главную" class="logo__link">
+								<a href="./index.html" title="На главную" class="logo__link">
 									<img src="" alt="" class="logo__brand" />
 									<span class="logo__text">Дай лапу!</span>
 								</a>
 							</div>
 						</div>
 						<div class="header__col header__col--right">
-							<button aria-label="Открыть модальное окно" class="header__button-form button button--primary" data-to>Помочь прямо сейчас</button>
+							<button aria-label="Открыть модальное окно" class="header__button-form button button--primary" data-toggler-modal>Помочь прямо сейчас</button>
 						</div>
 					</div>
 					<div class="header__row header__row--bottom">
 						<nav class="header__navbar navbar" id="navbar-top">
 							<menu class="navbar__menu">
-								<li class="navbar__menu-item"><a href="#!" class="navbar__menu-link">О&#160;нас</a></li>
-								<li class="navbar__menu-item"><a href="#!" class="navbar__menu-link">Питомцы</a></li>
-								<li class="navbar__menu-item"><a href="#!" class="navbar__menu-link">Реквизиты</a></li>
-								<li class="navbar__menu-item"><a href="#!" class="navbar__menu-link">Отчеты</a></li>
-								<li class="navbar__menu-item"><a href="#!" class="navbar__menu-link">Справочник</a></li>
-								<li class="navbar__menu-item"><a href="#!" class="navbar__menu-link">Новости</a></li>
-								<li class="navbar__menu-item"><a href="#!" class="navbar__menu-link">Контакты</a></li>
+								<li class="navbar__menu-item"><a aria-selected="Ссылка на страницу о нас" href="./about.html" class="navbar__menu-link">О&#160;нас</a></li>
+								<li class="navbar__menu-item"><a aria-selected="Ссылка на страницу питомцы" href="./pets.html" class="navbar__menu-link">Питомцы</a></li>
+								<li class="navbar__menu-item"><a aria-selected="Ссылка на страницу реквизиты" href="./requisites.html" class="navbar__menu-link">Реквизиты</a></li>
+								<li class="navbar__menu-item"><a aria-selected="Ссылка на страницу отчеты" href="./reports.html" class="navbar__menu-link">Отчеты</a></li>
+								<li class="navbar__menu-item"><a aria-selected="Ссылка на страницу справочник" href="./reference.html" class="navbar__menu-link">Справочник</a></li>
+								<li class="navbar__menu-item"><a aria-selected="Ссылка на страницу новости" href="./articles.html" class="navbar__menu-link">Новости</a></li>
+								<li class="navbar__menu-item"><a aria-selected="Ссылка на страницу контакты" href="./contacts.html" class="navbar__menu-link">Контакты</a></li>
 							</menu>
 						</nav>
 						<button class="header__menu-btn" id="menu-btn">
@@ -274,7 +275,7 @@
 													</div>
 													<div class="pet-card__content">
 														<div class="pet-card__detail">
-															<h3 class="pet-card__name"><a aria-label="Перейти на страницу" href="#!" class="pet-card__link">Юки</a></h3>
+															<h3 class="pet-card__name"><a aria-label="Перейти на страницу" href="single-pets.html" class="pet-card__link">Юки</a></h3>
 															<ul class="pet-card__info">
 																<li class="pet-card__info-item">
 																	<div class="pet-card__info-value">Дворняга</div>

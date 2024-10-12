@@ -1,3 +1,5 @@
+require("fslightbox");
+
 import phoneMask from "./modules/phone-mask";
 phoneMask();
 

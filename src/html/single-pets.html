@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Главная страница</title>
-		<meta name="title" content="Главная страница" />
+		<title>Single pets</title>
+		<meta name="title" content="Питомцы" />
 		<meta name="description" content="Краткое описание страницы, которое будет отображаться в результатах поиска." />
 		<meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3" />
 		<meta name="author" content="Ваше имя или название компании" />
@@ -33,13 +33,8 @@
 		@@include('blocks/header.html')
 		<main class="website__main main" id="main">
 			<div class="main__wrapper">
-				@@include('blocks/banner.html')
-				@@include('blocks/about.html')
-				@@include('blocks/news.html')
-				@@include('blocks/pets.html')
-				@@include('blocks/reference-section.html')
-				@@include('blocks/requisites-section.html')
-				@@include('blocks/help-section.html')
+				@@include('blocks/head-page.html')
+				@@include('blocks/single-pets.html')
 			</div>
 		</main>
 		@@include('blocks/modals/help-modal.html')
