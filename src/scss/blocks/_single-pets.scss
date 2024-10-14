@@ -4,61 +4,83 @@
     &__container {
     }
 
-    // .single-pets__rowTop
+    // .single-pets__row
 
-    &__rowTop {
-        width: 100%;
-        display: flex;
-        gap: var(--gap);
+    &__row {
     }
 
-    // .single-pets__preview
+    // .single-pets__row--top
 
-    &__preview {
-        flex: 3;
+    &__row--top {
     }
 
-    // .single-pets__preview-link
+    // .single-pets__banner
 
-    &__preview-link {
+    &__banner {
     }
 
-    // .single-pets__preview-photo
+    // .single-pets__banner-img
 
-    &__preview-photo {
+    &__banner-img {
+    }
+
+    // .single-pets__info
+
+    &__info {
+    }
+
+    // .single-pets__info-wrapper
+
+    &__info-wrapper {
+    }
+
+    // .single-pets__info-name
+
+    &__info-name {
+    }
+
+    // .single-pets__info-list
+
+    &__info-list {
+    }
+
+    // .single-pets__info-item
+
+    &__info-item {
+    }
+
+    // .single-pets__info-text
+
+    &__info-text {
+    }
+
+    // .single-pets__row--bottom
+
+    &__row--bottom {
+    }
+
+    // .single-pets__content
+
+    &__content {
     }
 
     // .single-pets__gallery
 
     &__gallery {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-gap: 8px;
-        flex: 2;
     }
 
-    // .single-pets__gallery-box
+    // .single-pets__gallery-item
 
-    &__gallery-box {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1 / 1;
+    &__gallery-item {
     }
 
     // .single-pets__gallery-link
 
     &__gallery-link {
-        width: 100%;
-        height: 100%;
     }
 
-    // .single-pets__gallery-photo
+    // .single-pets__gallery-img
 
-    &__gallery-photo {
-        width: 100%;
-        height: 100%;
-        border-radius: var(--rounded-sm);
-        object-fit: cover;
-        object-position: center;
+    &__gallery-img {
     }
 }
