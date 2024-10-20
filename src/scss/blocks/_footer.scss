@@ -22,6 +22,9 @@
         display: flex;
         gap: var(--gap);
         border-bottom: 1px solid var(--color-border-secondary);
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     // .footer__col

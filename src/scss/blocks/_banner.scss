@@ -122,12 +122,14 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+        font-weight: 700;
         color: var(--color-text);
         background-color: var(--color-primary-secondary);
         cursor: pointer;
-        transition: color .2s;
+        transition: color .3s linear;
         &:hover {
-            color: var(--color-text-secondary);
+            color: #fff;
+            background-color: var(--color-text);
         }
     }
 
