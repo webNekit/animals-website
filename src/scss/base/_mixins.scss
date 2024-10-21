@@ -89,12 +89,13 @@
   padding-inline: 24px;
   border-radius: var(--rounded-sm);
   border: 2px solid var(--color-border);
-  transition: border .2s;
+  transition: all .2s;
   color: var(--color-text);
   @include mobile {
     padding: 8px 8px;
   }
   &:is(:hover, &:focus) {
-    border-color: var(--color-primary-secondary);
+    outline-offset: 2px;
+    outline: 3px solid var(--color-primary-secondary);
   }
 }
