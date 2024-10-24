@@ -1,112 +1,98 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{%block title%} Помощь животным {% endblock %}</title>
-    <meta name="title" content=""/>
-    <meta name="description" content="Краткое описание страницы, которое будет отображаться в результатах поиска."/>
-    <meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3"/>
-    <meta name="author" content="Ваше имя или название компании"/>
-    <meta name="theme-color" content="#317EFB"/>
-    <meta property="og:title" content="Заголовок страницы"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://example.com/page.html"/>
-    <meta property="og:image" content="https://example.com/image.jpg"/>
-    <meta property="og:description" content="Описание страницы, которое будет отображаться в социальных сетях."/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Заголовок страницы"/>
-    <meta name="twitter:description" content="Описание страницы"/>
-    <meta name="twitter:image" content="https://example.com/image.jpg"/>
-    <meta name="language" content="ru"/>
-    <meta name="robots" content="index, nofollow"/>
-    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="icon" type="image/x-icon" href="{% static 'img/favicons/favicon.svg' %}">
-    {% load static %}
+    <meta name="title" content="" />
+    <meta name="description" content="Краткое описание страницы, которое будет отображаться в результатах поиска." />
+    <meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3" />
+    <meta name="author" content="Ваше имя или название компании" />
+    <meta name="theme-color" content="#317EFB" />
+    <meta property="og:title" content="Заголовок страницы" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/page.html" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:description" content="Описание страницы, которое будет отображаться в социальных сетях." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Заголовок страницы" />
+    <meta name="twitter:description" content="Описание страницы" />
+    <meta name="twitter:image" content="https://example.com/image.jpg" />
+    <meta name="language" content="ru" />
+    <meta name="robots" content="index, nofollow" />
+    <link rel="stylesheet" href="{% static '/css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="{% static '/img/favicons/favicon.svg' %}">
 </head>
+
 <body class="website" id="website">
-<div class="website__layout">
-    <main class="website__main main" id="main">
-        <div class="main__wrapper">
-            {% block content %}{% endblock %}
-        </div>
-    </main>
-    <div aria-label="Модальное окно" class="help-modal" data-modal>
-        <div class="help-modal__wrapper" data-modal-wrapper>
-            <div class="help-modal__rowTop">
-                <div class="container help-modal__rowTop-container">
-                    <button aria-label="Закрыть модальное окно" class="help-modal__close" data-toggler-modal>
-                        <i class="ri-close-fill"></i>
-                    </button>
-                </div>
+    <div class="website__layout">
+        {% include 'layout/includes/header.html' %}
+        <main class="website__main main" id="main">
+            <div class="main__wrapper">
+                {% block content %}{% endblock %}
             </div>
-            <div class="help-modal__rowBottom">
-                <div class="container help-modal__rowBottom-container">
-                    <div class="help-modal__content">
-                        <h3 class="help-modal__content-title">Оставьте заявку и&#160;мы&#160;свяжемся с&#160;вами</h3>
-                        <form action="#" class="help-modal__form" method="post">
-                            <div class="help-modal__form-group">
-                                <div class="help-modal__form-item">
-                                    <label for="first-name" class="help-modal__form-label">Ваше имя</label>
-                                    <input aria-label="Ваше имя" type="text" name="first-name" id="first-name"
-                                           class="help-modal__form-input" placeholder="Сергей" required/>
+        </main>
+        <div aria-label="Модальное окно" class="help-modal" data-modal>
+            <div class="help-modal__wrapper" data-modal-wrapper>
+                <div class="help-modal__rowTop">
+                    <div class="container help-modal__rowTop-container">
+                        <button aria-label="Закрыть модальное окно" class="help-modal__close" data-toggler-modal>
+                            <i class="ri-close-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="help-modal__rowBottom">
+                    <div class="container help-modal__rowBottom-container">
+                        <div class="help-modal__content">
+                            <h3 class="help-modal__content-title">Оставьте заявку и&#160;мы&#160;свяжемся с&#160;вами
+                            </h3>
+                            <form action="#" class="help-modal__form" method="post">
+                                <div class="help-modal__form-group">
+                                    <div class="help-modal__form-item">
+                                        <label for="first-name" class="help-modal__form-label">Ваше имя</label>
+                                        <input aria-label="Ваше имя" type="text" name="first-name" id="first-name"
+                                            class="help-modal__form-input" placeholder="Сергей" required />
+                                    </div>
+                                    <div class="help-modal__form-item">
+                                        <label for="last-name" class="help-modal__form-label">Ваша фамилия</label>
+                                        <input aria-label="Ваша фамилия" type="text" name="last-name" id="last-name"
+                                            class="help-modal__form-input" placeholder="Иванов" required />
+                                    </div>
                                 </div>
-                                <div class="help-modal__form-item">
-                                    <label for="last-name" class="help-modal__form-label">Ваша фамилия</label>
-                                    <input
-                                            aria-label="Ваша фамилия"
-                                            type="text"
-                                            name="last-name"
-                                            id="last-name"
-                                            class="help-modal__form-input"
-                                            placeholder="Иванов"
-                                            required
-                                    />
+                                <div class="help-modal__form-group">
+                                    <div class="help-modal__form-item">
+                                        <label for="phone" class="help-modal__form-label">Ваш номер телефона</label>
+                                        <input aria-label="Ваш номер телефона" type="text" name="phone" id="phone"
+                                            class="help-modal__form-input" placeholder="+7(000)000-00-00"
+                                            data-input-phone required />
+                                    </div>
+                                    <div class="help-modal__form-item">
+                                        <label for="email" class="help-modal__form-label">Ваш адрес эл.почты</label>
+                                        <input aria-label="Ваш адрес эл.почты" type="emall" name="email" id="email"
+                                            class="help-modal__form-input" placeholder="help@example.ru" required />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="help-modal__form-group">
-                                <div class="help-modal__form-item">
-                                    <label for="phone" class="help-modal__form-label">Ваш номер телефона</label>
-                                    <input
-                                            aria-label="Ваш номер телефона"
-                                            type="text"
-                                            name="phone"
-                                            id="phone"
-                                            class="help-modal__form-input"
-                                            placeholder="+7(000)000-00-00"
-                                            data-input-phone
-                                            required
-                                    />
-                                </div>
-                                <div class="help-modal__form-item">
-                                    <label for="email" class="help-modal__form-label">Ваш адрес эл.почты</label>
-                                    <input
-                                            aria-label="Ваш адрес эл.почты"
-                                            type="emall"
-                                            name="email"
-                                            id="email"
-                                            class="help-modal__form-input"
-                                            placeholder="help@example.ru"
-                                            required
-                                    />
-                                </div>
-                            </div>
-                            <div class="help-modal__form-group">
-                                <div class="help-modal__form-item">
-                                    <button aria-label="Отправить заявку" type="submit"
+                                <div class="help-modal__form-group">
+                                    <div class="help-modal__form-item">
+                                        <button aria-label="Отправить заявку" type="submit"
                                             class="help-modal__form-button button button--primary">Отправить заявку
-                                    </button>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="overlay" id="overlay" data-overlay></div>
+        {% include 'layout/includes/footer.html' %}
     </div>
-    <div class="overlay" id="overlay" data-overlay></div>
-</div>
+    <script src="{% static 'js/index.bundle.js' %}"></script>
 </body>
+
+</html>

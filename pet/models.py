@@ -25,9 +25,9 @@ class Breed(models.Model):
 
 class Pet(models.Model):
     name = models.CharField(max_length=255, verbose_name='Кличка', help_text="Шарик")
-    category = models.ForeignKey(Category, on_delete=models.CASCADE(), verbose_name='Категория питомца')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория питомца')
     age = models.CharField(max_length=255, default='0', verbose_name='Возраст питомца', help_text='2 года 10 месяцев')
-    breed = models.ForeignKey(Breed, on_delete=models.CASCADE(), verbose_name='Порода')
+    breed = models.ForeignKey(Breed, on_delete=models.CASCADE, verbose_name='Порода')
     content = models.TextField(verbose_name="Описание о питомце", help_text="Умный, ласковый, ищет дом")
     meta_title = models.CharField(max_length=255, verbose_name="Meta-заголовок")
     meta_keywords = models.CharField(max_length=255, verbose_name="Meta-ключевые слова")
@@ -43,7 +43,7 @@ class Pet(models.Model):
 
 
 class PetImage(models.Model):
-    pet = models.ForeignKey(Pet, on_delete=models.CASCADE(), related_name='images', verbose_name="Питомец")
+    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name='images', verbose_name="Питомец")
     image = models.ImageField(upload_to="pets/", verbose_name="Изображение")
 
     class Meta:
